@@ -7,6 +7,11 @@
     <title>Instagram / Post List</title>
 </head>
 <body>
+    <form action="" method="get">
+        <input type="text" name="q" value="{{ q }}"/>
+        <input type="submit" value="검색">
+    </form>
+
 <table class="table table-bordered table-hover">
     <tbody>
         {% for post in post_list %}

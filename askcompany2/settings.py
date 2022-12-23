@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #third apps
     'django_extensions', #extensions 추가
+    'debug_toolbar',
     #locals apps
     'blog1',
     'instagram',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -132,5 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'  # URL 접근시
 MEDIA_ROOT = os.path.join(BASE_DIR,'media') #저장시
+
+INTERNAL_IPS = ['127.0.0.1']
 
 

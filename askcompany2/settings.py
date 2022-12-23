@@ -32,12 +32,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #third apps
+    'django_extensions', #extensions 추가
+    #locals apps
     'blog1',
     'instagram',
 ]
@@ -128,3 +132,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'  # URL 접근시
 MEDIA_ROOT = os.path.join(BASE_DIR,'media') #저장시
+
+

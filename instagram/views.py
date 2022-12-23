@@ -9,5 +9,5 @@ def post_list(request):
     # instagram/templates/instagram/post_list.html
     return render(request, 'instagram/post_list.html', {
         'post_list': qs,
-        'q':q,
+        'q':q, #input type에 전달
     })

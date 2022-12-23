@@ -9,7 +9,7 @@
 <body>
     <form action="" method="get">
         <input type="text" name="q" value="{{ q }}"/>
-        <input type="submit" value="검색">
+        <input type="submit" value="검색" />
     </form>
 
 <table class="table table-bordered table-hover">
@@ -17,7 +17,8 @@
         {% for post in post_list %}
             <tr>
                 <td>
-                    {% if post.photo %}
+
+                    {% if post.photo %}  {# 사진이 있을때만  #}
                         <img src="{{ post.photo.url }}" style="width: 100px" />
                     {% else %}
                         No Photo

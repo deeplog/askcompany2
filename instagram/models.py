@@ -18,10 +18,9 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    models.ForeignKey('instagram.Post', on_delete=models.CASCADE)
+    post = models.ForeignKey('instagram.Post', on_delete=models.CASCADE) # post_id 생성
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
 
 

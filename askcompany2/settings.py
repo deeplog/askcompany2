@@ -137,4 +137,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media') #저장시
 
 INTERNAL_IPS = ['127.0.0.1']
 
+AUTH_USER_MODEL = 'instagram.User' # 프로젝트 시작시 마다 셋팅 할 것
+
 

@@ -1,6 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User # User 모델이 변경될 수 있음. 좋은 방법이 아남
 
 class Post(models.Model):
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     message = models.TextField()
     photo = models.ImageField(blank=True, upload_to='instagram/post/%Y%m%d')
     is_public = models.BooleanField(default=False, verbose_name='공개여부')

@@ -25,7 +25,8 @@ from django.conf import settings #위의 두가지를 합쳐준다.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog1/', include('blog1.urls')),
-    path('instagram', include('instagram.urls'))
+    path('instagram/', include('instagram.urls')),
+    path('accounts/', include('accounts.urls'))
 ]
 
 if settings.DEBUG:

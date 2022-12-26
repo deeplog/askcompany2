@@ -11,3 +11,6 @@ def post_list(request):
         'post_list': qs,
         'q':q, #input type에 전달
     })
+
+def post_detail(request, pk):
+    pass

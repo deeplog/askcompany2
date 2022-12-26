@@ -1,3 +1,4 @@
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 from .models import Post
 
@@ -12,5 +13,10 @@ def post_list(request):
         'q':q, #input type에 전달
     })
 
-def post_detail(request, pk):
-    pass
+
+def post_detail(request: HttpRequest, pk) -> HttpResponse:
+    response = HttpResponse()
+    response.write("Hello World")
+    response.write("Hello World")
+    response.write("Hello World")
+    return response

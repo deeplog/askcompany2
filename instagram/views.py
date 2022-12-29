@@ -18,11 +18,11 @@ post_list = ListView.as_view(model=Post)
 
 
 def post_detail(request: HttpRequest, pk) -> HttpResponse:
-    response = HttpResponse()
-    response.write("Hello World")
-    response.write("Hello World")
-    response.write("Hello World")
-    return response
+    post = Post.objects.get(pk=pk)
+    return render(request, 'instagram/post_detail.html',{
+        'post':post,
+        }
+    )
 
 def archives_year(request, year):
     return HttpResponse(f"{year}년 Archives")

@@ -64,7 +64,10 @@ ROOT_URLCONF = 'askcompany2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # File System Template Loader
+            os.path.join(BASE_DIR, 'askcompany2', 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

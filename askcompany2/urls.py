@@ -23,7 +23,8 @@ from django.conf import settings #위의 두가지를 합쳐준다.
 from django.views.generic import TemplateView, RedirectView
 
 urlpatterns = [
-    path('',RedirectView.as_view(url='/instagram/'),name = 'root'),
+    #path('',RedirectView.as_view(url='/instagram/'),name = 'root'),
+    path('',RedirectView.as_view(pattern_name='instagram:post_list',), name='root'),
     path('admin/', admin.site.urls),
     path('blog1/', include('blog1.urls')),
     path('instagram/', include('instagram.urls')),

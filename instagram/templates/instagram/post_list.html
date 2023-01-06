@@ -17,6 +17,9 @@
         {% for post in post_list %}
             <tr>
                 <td>
+                    {{ post.pk }}
+                </td>
+                <td>
 
                     {% if post.photo %}  {# 사진이 있을때만  #}
                         <img src="{{ post.photo.url }}" style="width: 100px" />
@@ -32,5 +35,7 @@
 
     </tbody>
 </table>
+{{ is_paginated }}
+{{ page_obj }}
 </body>
 </html>

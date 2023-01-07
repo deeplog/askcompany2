@@ -21,6 +21,7 @@ urlpatterns =[
     path('<int:pk>/', views.post_detail),
     # path('archives/<int:year>/', views.archives_year),
     #re_path('archives/(?P<year>\d{4})/', views.archives_year)
-    path('archives/<year:year>/', views.archives_year),
+    # path('archives/<year:year>/', views.archives_year),
     # re_path(r'(?P<pk>\d+)/$', views.post_detail())
+    path('archive/', views.post_archive, name = 'post_archive')
 ]

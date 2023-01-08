@@ -58,8 +58,8 @@ class PostDetailView(DetailView):
 
 post_detail = PostDetailView.as_view()
 
-# def archives_year(request, year):
-#     return HttpResponse(f"{year}년 Archives")
+def archives_year(request, year):
+    return HttpResponse(f"{year}년 Archives")
 
 post_archive = ArchiveIndexView.as_view(model=Post, date_field='created_at', paginate_by=10)
 

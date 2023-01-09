@@ -27,7 +27,7 @@ urlpatterns = [
     path('',RedirectView.as_view(pattern_name='instagram:post_list',), name='root'),
     path('admin/', admin.site.urls),
     path('blog1/', include('blog1.urls')),
-    path('instagram/', include('instagram.urls')),
+    path('k-instagram/', include('instagram.urls')),
     path('accounts/', include('accounts.urls'))
 ]
 
